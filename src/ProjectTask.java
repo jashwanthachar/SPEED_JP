@@ -7,4 +7,9 @@ public class ProjectTask extends Task {
     public void buildProject() {
         System.out.println("Project task: " + getTitle());
     }
+
+    @Override
+    public String calculatePriority() {
+        return "LOW";
+    }
 }

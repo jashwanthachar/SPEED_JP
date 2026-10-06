@@ -7,4 +7,9 @@ public class Assignment extends Task {
     public void submitAssignment() {
         System.out.println(getTitle() + " assignment submitted");
     }
+
+    @Override
+    public String calculatePriority() {
+        return "HIGH";
+    }
 }

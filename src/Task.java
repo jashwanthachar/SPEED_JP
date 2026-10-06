@@ -31,4 +31,20 @@ public class Task {
             return title + " - Pending";
         }
     }
+
+    // Method for polymorphism
+    public String calculatePriority() {
+        return "MEDIUM";
+    }
+
+    // Method overloading
+    public String calculatePriority(int daysLeft) {
+        if (daysLeft <= 1) {
+            return "HIGH";
+        } else if (daysLeft <= 3) {
+            return "MEDIUM";
+        } else {
+            return "LOW";
+        }
+    }
 }

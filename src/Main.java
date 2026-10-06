@@ -123,5 +123,17 @@ public class Main {
         assignment1.submitAssignment();
         codingTask1.writeCode();
         projectTask1.buildProject();
+        // Polymorphism
+Task taskA = new Assignment("Java Assignment");
+Task taskB = new CodingTask("Build SPEED Feature");
+Task taskC = new ProjectTask("Complete SPEED Project");
+
+System.out.println("Assignment Priority: " + taskA.calculatePriority());
+System.out.println("Coding Task Priority: " + taskB.calculatePriority());
+System.out.println("Project Task Priority: " + taskC.calculatePriority());
+
+// Method overloading
+System.out.println("Priority with 1 day left: " + taskA.calculatePriority(1));
+System.out.println("Priority with 5 days left: " + taskA.calculatePriority(5));
     }
 }
