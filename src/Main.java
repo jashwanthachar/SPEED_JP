@@ -135,5 +135,23 @@ System.out.println("Project Task Priority: " + taskC.calculatePriority());
 // Method overloading
 System.out.println("Priority with 1 day left: " + taskA.calculatePriority(1));
 System.out.println("Priority with 5 days left: " + taskA.calculatePriority(5));
+// Progress Calculator
+StudentProgress progress = new StudentProgress(7, 10);
+
+System.out.println(
+        "Student Progress: " + progress.calculateProgress() + "%"
+);
+// Recommendation Engine
+StudyRecommendation recommendation =
+        new StudyRecommendation(35);
+
+System.out.println(
+        "Recommendation: " + recommendation.generateRecommendation()
+);
+// Notification Service
+ConsoleNotification notification =
+        new ConsoleNotification();
+
+notification.sendNotification("Java assignment deadline is tomorrow.");
     }
 }
