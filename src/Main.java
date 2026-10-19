@@ -153,5 +153,45 @@ ConsoleNotification notification =
         new ConsoleNotification();
 
 notification.sendNotification("Java assignment deadline is tomorrow.");
+// Day 7: Collections
+
+SPEEDData speedData = new SPEEDData();
+
+// Add existing objects to collections
+speedData.addStudent(student1);
+speedData.addSubject(subject1);
+speedData.addTask(task1);
+speedData.addProject(project1);
+
+// Display collection sizes
+System.out.println("\n===== SPEED COLLECTIONS =====");
+
+System.out.println("Students: " + speedData.getStudents().size());
+System.out.println("Subjects: " + speedData.getSubjects().size());
+System.out.println("Tasks: " + speedData.getTasks().size());
+System.out.println("Projects: " + speedData.getProjects().size());
+
+// Iterate through students
+System.out.println("\n===== STUDENT LIST =====");
+
+for (Student student : speedData.getStudents()) {
+    System.out.println(student.getProfile());
+}
+// Day 7: HashMap registry
+StudentRegistry registry = new StudentRegistry();
+
+registry.registerStudent(student1);
+registry.registerStudent(student2);
+registry.registerStudent(student3);
+
+System.out.println("\n===== STUDENT REGISTRY =====");
+System.out.println("Registered students: " + registry.getStudentCount());
+
+Student foundStudent = registry.findStudent("jash@speed.com");
+
+if (foundStudent != null) {
+    System.out.println("Found: " + foundStudent.getProfile());
+}
     }
+    
 }
