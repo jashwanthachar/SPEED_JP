@@ -192,6 +192,19 @@ Student foundStudent = registry.findStudent("jash@speed.com");
 if (foundStudent != null) {
     System.out.println("Found: " + foundStudent.getProfile());
 }
+// Day 7: HashSet
+CourseRegistry courseRegistry = new CourseRegistry();
+
+courseRegistry.addCourse("Java");
+courseRegistry.addCourse("Python");
+courseRegistry.addCourse("Java"); // Duplicate
+
+System.out.println("\n===== UNIQUE COURSES =====");
+System.out.println("Unique course count: " + courseRegistry.getCourseCount());
+
+for (String course : courseRegistry.getCourses()) {
+    System.out.println(course);
+}
     }
     
 }
