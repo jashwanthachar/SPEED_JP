@@ -1,6 +1,6 @@
 public class ProjectTask extends Task {
 
-    public ProjectTask(String title) {
+    public ProjectTask(String title) throws InvalidTaskException {
         super(title);
     }
 

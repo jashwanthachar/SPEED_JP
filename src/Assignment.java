@@ -1,6 +1,6 @@
 public class Assignment extends Task {
 
-    public Assignment(String title) {
+    public Assignment(String title) throws InvalidTaskException {
         super(title);
     }
 

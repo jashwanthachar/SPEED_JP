@@ -3,8 +3,8 @@ public class Task {
     private String title;
     private boolean completed;
 
-    public Task(String title) {
-        this.title = title;
+    public Task(String title) throws InvalidTaskException {
+        setTitle(title);
         this.completed = false;
     }
 
@@ -16,7 +16,10 @@ public class Task {
         return completed;
     }
 
-    public void setTitle(String title) {
+    public void setTitle(String title) throws InvalidTaskException {
+        if (title == null || title.trim().isEmpty()) {
+            throw new InvalidTaskException("Task title cannot be empty.");
+        }
         this.title = title;
     }
 

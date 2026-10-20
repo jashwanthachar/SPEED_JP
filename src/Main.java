@@ -1,6 +1,6 @@
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         // Creating Student objects
         Student student1 = new Student(
@@ -100,7 +100,6 @@ public class Main {
         System.out.println("Updated Marks: " + assessment1.getMarks());
         System.out.println("Updated Percentage: " + assessment1.getPercentage());
 
-        assessment1.setMarks(150);
 
         // Mentor
         Mentor mentor1 = new Mentor(
@@ -205,6 +204,28 @@ System.out.println("Unique course count: " + courseRegistry.getCourseCount());
 for (String course : courseRegistry.getCourses()) {
     System.out.println(course);
 }
+// Day 8: Exception handling
+System.out.println("\n===== DAY 8: EXCEPTION HANDLING =====");
+try {
+    new Task("   ");
+} catch (InvalidTaskException e) {
+    System.out.println("Caught task error: " + e.getMessage());
+} finally {
+    System.out.println("Task validation finished.");
+}
+
+try {
+    assessment1.setMarks(150);
+} catch (InvalidMarksException e) {
+    System.out.println("Caught marks error: " + e.getMessage());
+}
+
+try {
+    new Student("", "bad@speed.com", "CSE", 2);
+} catch (InvalidStudentException e) {
+    System.out.println("Caught student error: " + e.getMessage());
+}
     }
     
 }
+
